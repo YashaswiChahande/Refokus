@@ -14,7 +14,7 @@ function Cards() {
                 width={"basis-2/3"} 
                 start={true} 
                 para={false} 
-                hover={"bg-violet-600"}
+                hover="true"
             />
     </div>
     </div>

@@ -1,16 +1,16 @@
 import React from 'react'
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { FaArrowRightLong } from 'react-icons/fa6'
+import { motion } from "framer-motion"
 
-
-function Card({ width, start, para, hover = 'none' }) {
+function Card({ width, start, para, hover = 'false' }) {
   return (
-    <div className={`bg-zinc-800 p-5 rounded-xl hover:${hover} ${width} min-h-[30rem] flex flex-col justify-between `}>
+    <motion.div whileHover={{backgroundColor: hover === "true" &&"#7443ff", padding: "35px" }} className={`bg-zinc-800 p-5 rounded-xl ${width} min-h-[30rem] flex flex-col justify-between `}>
      <div className='w-full' >
         <div className='w-full flex justify-between items-center'>
             <h3>
                 one heading
             </h3>
-            <IoIosArrowRoundForward />
+            <FaArrowRightLong className='font-sm' />
         </div>
         <h1 className='text-3xl font-medium mt-5'>Lorem, ipsum.
 
@@ -39,7 +39,7 @@ function Card({ width, start, para, hover = 'none' }) {
         
     
      </div>
-    </div>
+    </motion.div>
   )
 }
 
