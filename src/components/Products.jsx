@@ -36,10 +36,11 @@ function Products() {
     ]
 
   return (
-    <div className='mt-32 '>
+    <div className='mt-32 relative '>
         {
             products.map((val, index)=> <Product key={index} val = {val} /> )
         }
+        <div className='absolute top-0 w-full h-full pointer-events-none'></div>
     </div>
   )
 }
